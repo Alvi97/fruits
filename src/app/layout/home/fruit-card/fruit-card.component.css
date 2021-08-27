@@ -1,0 +1,43 @@
+.fruit-card{
+    display: inline-block;
+    width: 300px;
+    background-color: transparent;
+    padding: 30px;
+    text-align: center;
+    padding-bottom: 0;
+    background-color: #eeeeee;
+}
+
+.fruit-card:nth-child(odd){
+    background: #f7f7f7;
+}
+
+.example-header-image{
+    max-width: 50px;
+}
+
+.example-header-image img {
+    width: inherit;
+}
+
+.button{
+    width: 100%;
+}
+
+table{
+    width: 100%;
+}
+
+.nutritions:nth-child(odd){
+    padding: 5px;
+    background-color: #eeeeee83;
+}
+
+
+
+td, th {
+    text-align: left;
+    padding: 8px;
+  }
+
+

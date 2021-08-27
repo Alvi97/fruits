@@ -1,0 +1,19 @@
+.fruit-graph-card{
+    max-width: 450px;
+    width: 450px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.chart-name{
+    text-align: center;
+    width: 100%;
+}
+
+.mat-card-header-text:ng-deep{
+    margin: 0 !important;
+}
+
+::ng-deep .mat-card-header-text{
+    margin: 0 !important;
+}

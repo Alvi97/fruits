@@ -1,0 +1,49 @@
+
+<button style="position: absolute;left: 1%;" mat-raised-button  color="accent" (click)="goBack()"><mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
+    Go Back</button>
+
+<h1>{{fruit.name}} <h4 style="display: inline-block;margin: 0;">({{fruit.family}})</h4></h1>
+      
+<span>{{fruit.genus}}</span>
+
+<div style="margin-top: 30px;">
+
+    <mat-card class="fruit-graph-card mat-elevation-z8">
+        <mat-card-header>
+          <h1 class="chart-name">Pie Chart</h1>
+        </mat-card-header>
+       
+        <mat-card-content>
+            <app-pie-chart [fruit]="fruit"></app-pie-chart>
+        </mat-card-content>
+
+      </mat-card>
+
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      
+      <mat-card class="fruit-graph-card mat-elevation-z8">
+        <mat-card-header>
+          <h1 class="chart-name">Radial Bar</h1>
+        </mat-card-header>
+       
+        <mat-card-content>
+         <app-radial-bar [fruit]="fruit"></app-radial-bar>
+        </mat-card-content>
+
+      </mat-card>
+
+      <mat-card class="fruit-graph-card mat-elevation-z8">
+        <mat-card-header>
+          <h1 class="chart-name">Radial Bar</h1>
+        </mat-card-header>
+       
+        <mat-card-content>
+       <app-donut [fruit]="fruit"></app-donut>
+    </mat-card-content>
+      </mat-card>
+
+
+
+</div>

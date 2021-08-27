@@ -1,0 +1,50 @@
+
+<div>
+  <span>Sort Fruits: </span>
+  <mat-form-field appearance="fill">
+    <mat-label>Nutributions</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="nutribution">
+      <mat-option *ngFor="let nutribution of nutributions" [value]="nutribution">
+        {{nutribution}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+
+  <mat-radio-group  aria-label="Select an option">
+    <mat-radio-button class="spacer-around" (change)="selectedRadio('Ascending')" value="Ascending">Ascending</mat-radio-button>
+    <mat-radio-button class="spacer-around" (change)="selectedRadio('Descending')" value="Descending">Descending</mat-radio-button>
+  </mat-radio-group>
+
+
+  <button class="spacer-around" [disabled]="!selectedValue" mat-raised-button color="accent" (click)="sortBy()">Search</button>
+
+  <div>
+    <span>Search By Fruit Name:</span>
+    <input type="search" (keyup)="changed($event)"> 
+  </div>
+
+</div>
+  
+  <ng-container *ngIf="allFruits$ |async as allFruits;  else loading" >
+
+
+    <div *ngFor="let fruit of allFruits" class="card-container">
+
+      
+      <app-fruit-card [fruit]="fruit" ></app-fruit-card>
+
+    </div>
+
+  </ng-container>
+
+
+  <ng-template #loading>
+    <app-spinner></app-spinner>
+  </ng-template>
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<mat-card class="fruit-card mat-elevation-z8">
+    <mat-card-header style="display: block;">
+      <mat-card-title>{{fruit.name}} <h4 style="display: inline-block;margin: 0;">({{fruit.family}})</h4></mat-card-title>
+      
+      <mat-card-subtitle>{{fruit.genus}}</mat-card-subtitle>
+      <div>
+       <span> Healthy metter</span>
+       <mat-progress-bar mode="determinate" [value]="fruit.nutritions.calories"></mat-progress-bar>
+
+      </div>
+     
+    </mat-card-header>
+   
+    <mat-card-content>
+
+
+        <table class="nutritions" *ngFor="let nutritions of fruit.nutritions | keyvalue">
+
+          <tr>
+            <td class="key">{{nutritions.key}}</td>
+            <td style="text-align: right;" class="value">{{nutritions.value}}</td>
+          </tr>
+          </table>
+          
+          
+        
+    </mat-card-content>
+    <mat-card-actions>
+   
+      <button mat-raised-button color="accent" class="button" [routerLink]="['/graphs' , fruit.name]" (click)="setCurrentFruit(fruit)">View More Stats</button>
+    </mat-card-actions>
+  </mat-card>
+  
